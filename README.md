@@ -6,7 +6,7 @@ CoreUI is an Open Source Bootstrap Admin Template. But CoreUI is not just anothe
 
 ``` bash
 # clone the repo
-$ git clone https://github.com/coreui/coreui-free-react-admin-template.git my-project
+$ git clone https://github.com/MBahamondes/coreui-free-react-webpack4.git my-project
 
 # go into app's directory
 $ cd my-project
