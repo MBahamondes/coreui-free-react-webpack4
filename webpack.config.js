@@ -36,7 +36,7 @@ const prodPlugins = [
   }),
   new CopyWebpackPlugin(
     [
-      { from: './public/assets/img', to: 'img' },
+      { from: './public/assets/img', to: 'assets/img' },
     ],
     { copyUnmodified: false },
   ),
@@ -60,7 +60,9 @@ const devPlugins = [
   }),
   new CopyWebpackPlugin(
     [
-      { from: './public/img', to: 'img' },
+      { from: './public/assets/img', to: 'assets/img' },
+      { from: './public/favicon.ico', to: 'assets/img/favicon.ico' },
+      { from: './public/manifest.json', to: 'assets/manifest.json' },
     ],
     { copyUnmodified: false },
   ),
@@ -128,17 +130,8 @@ module.exports = (env = {}) => ({
           loader: 'style-loader', // inject CSS to page
         }, {
           loader: 'css-loader',
-          options: { alias: { '../img': '../public/img' } },
         }, {
           loader: 'postcss-loader', // Run post css actions
-          options: {
-            plugins() { // post css plugins, can be exported to postcss.config.js
-              return [
-                preCSS,
-                autoPrefixer,
-              ];
-            },
-          },
         }, {
           loader: 'sass-loader', // compiles Sass to CSS
         }],

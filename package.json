@@ -51,19 +51,28 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "compression-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.0.0",
+    "cssnano": "^4.1.10",
     "hard-source-webpack-plugin": "^0.13.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.7.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
     "precss": "^4.0.0",
     "react-scripts": "^3.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "sugarss": "^2.0.0",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1"
   },
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.config.js",
-    "build": "NODE_ENV=production && webpack --config webpack.config.js"
+    "build": "NODE_ENV=production && webpack --config webpack.config.js",
+    "build-dev": "webpack  --config webpack.config.js"
   },
   "bugs": {
     "url": "https://github.com/coreui/coreui-free-react-admin-template/issues"
